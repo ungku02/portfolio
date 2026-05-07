@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ungku | Software Engineer</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <style>
+        :root {
+            --cream: #f7efe5;
+            --maroon: #8b1e24;
+            --soft-maroon: #b85c63;
+            --dark: #1f1f1f;
+            --white: #ffffff;
+            --muted: #6c757d;
+            --card: #ffffff;
+            --section: #fffaf3;
+            --border: rgba(139, 30, 36, 0.15);
+            --shadow: 0 20px 50px rgba(31, 31, 31, 0.08);
+        }
+
+        [data-theme="dark"] {
+            --cream: #111111;
+            --maroon: #f1c6c9;
+            --soft-maroon: #d98b92;
+            --dark: #f8f1ea;
+            --white: #181818;
+            --muted: #b7b7b7;
+            --card: #1d1d1d;
+            --section: #161616;
+            --border: rgba(241, 198, 201, 0.16);
+            --shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        html,
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: var(--cream);
+            color: var(--dark);
+            transition: background 0.3s ease, color 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .navbar {
+            background: rgba(247, 239, 229, 0.82);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="dark"] .navbar {
+            background: rgba(17, 17, 17, 0.82);
+        }
+
+        .navbar-brand {
+            color: var(--maroon) !important;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-link {
+            color: var(--dark) !important;
+            font-weight: 500;
+            margin-left: 0.7rem;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--maroon) !important;
+        }
+
+        .text-maroon {
+            color: var(--maroon) !important;
+        }
+
+        .bg-maroon {
+            background: var(--maroon) !important;
+        }
+
+        .section-padding {
+            padding: 110px 0;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 520px;
+            height: 520px;
+            background: radial-gradient(circle, rgba(139, 30, 36, 0.22), transparent 65%);
+            top: 8%;
+            right: -12%;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 360px;
+            height: 360px;
+            background: radial-gradient(circle, rgba(184, 92, 99, 0.18), transparent 65%);
+            bottom: 4%;
+            left: -10%;
+            z-index: 0;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.45rem 0.9rem;
+            border: 1px solid var(--border);
+            color: var(--maroon);
+            border-radius: 999px;
+            background: var(--card);
+            font-size: 0.9rem;
+            font-weight: 700;
+            box-shadow: var(--shadow);
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 7vw, 5.8rem);
+            font-weight: 800;
+            letter-spacing: -3px;
+            line-height: 0.95;
+            margin: 1.4rem 0;
+            color: #8b1e24;
+        }
+
+        .hero-desc {
+            font-size: 1.12rem;
+            color: var(--muted);
+            max-width: 680px;
+        }
+
+        .btn-maroon {
+            background: var(--maroon);
+            color: var(--white);
+            border: 1px solid var(--maroon);
+            border-radius: 999px;
+            padding: 0.85rem 1.4rem;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .btn-maroon:hover {
+            transform: translateY(-3px);
+            background: transparent;
+            color: var(--maroon);
+            border-color: var(--maroon);
+        }
+
+        .btn-outline-maroon {
+            border: 1px solid var(--maroon);
+            color: var(--maroon);
+            border-radius: 999px;
+            padding: 0.85rem 1.4rem;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .btn-outline-maroon:hover {
+            transform: translateY(-3px);
+            background: var(--maroon);
+            color: var(--white);
+        }
+
+        .hero-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            border-radius: 32px;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .profile-circle {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--maroon), var(--soft-maroon));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 4rem;
+            font-weight: 800;
+            margin: auto;
+        }
+
+        .stat-box {
+            background: var(--section);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 1.2rem;
+            height: 100%;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            color: var(--dark);
+            margin-bottom: 0.8rem;
+        }
+
+        .section-subtitle {
+            color: var(--muted);
+            max-width: 720px;
+            margin-bottom: 3rem;
+        }
+
+        .premium-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 28px;
+            padding: 1.7rem;
+            height: 100%;
+            box-shadow: var(--shadow);
+            transition: 0.3s ease;
+        }
+
+        .premium-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--maroon);
+        }
+
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
+            background: rgba(139, 30, 36, 0.12);
+            color: var(--maroon);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .experience-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            border-left: 2px solid var(--border);
+        }
+
+        .experience-item::before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--maroon);
+        }
+
+        .badge-tech {
+            display: inline-block;
+            padding: 0.4rem 0.7rem;
+            border-radius: 999px;
+            background: rgba(139, 30, 36, 0.1);
+            color: var(--maroon);
+            font-weight: 700;
+            font-size: 0.78rem;
+            margin: 0.2rem;
+        }
+
+        .project-card {
+            cursor: pointer;
+        }
+
+        .project-card .project-arrow {
+            transition: 0.25s ease;
+        }
+
+        .project-card:hover .project-arrow {
+            transform: translateX(6px);
+        }
+
+        .section-alt {
+            background: var(--section);
+        }
+
+        .modal-content {
+            background: var(--card);
+            color: var(--dark);
+            border-radius: 28px;
+            border: 1px solid var(--border);
+        }
+
+        .theme-toggle {
+            border: 1px solid var(--border);
+            background: var(--card);
+            color: var(--maroon);
+            border-radius: 999px;
+            width: 42px;
+            height: 42px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.25s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(12deg) scale(1.05);
+            border-color: var(--maroon);
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, var(--maroon), var(--soft-maroon));
+            color: var(--white);
+            border-radius: 36px;
+            padding: 4rem 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-box a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+        }
+
+        @media (max-width: 991px) {
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero-title {
+                letter-spacing: -1.5px;
+            }
+
+            .nav-link {
+                margin-left: 0;
+            }
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fs-3" href="#">Ungku.</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Left -->
+                <div class="col-lg-7" data-aos="fade-right">
+
+                    <span class="eyebrow">
+                        <i class="bi bi-code-slash"></i>
+                        Software Engineer
+                    </span>
+
+                    <h1 class="hero-title">
+                        My Portfolio </h1>
+
+                    <p class="hero-desc">
+                        Software Engineer with 2+ years of experience specializing in Laravel,
+                        RESTful APIs, ERP systems, SaaS platforms, and system integration.
+                        Experienced in developing production-ready systems including
+                        LHDN e-Invoicing integration, ticketing workflows, and modular ERP platforms.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+
+                        <a href="#projects" class="btn btn-maroon">
+                            View Projects
+                            <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+
+                        <a href="./assets/cv/RESUME-UNGKU V2.pdf" class="btn btn-outline-maroon" download>
+                            Download CV
+                        </a>
+
+                    </div>
+
+                    <!-- Social -->
+                    <div class="d-flex align-items-center gap-3 mt-5">
+
+                        <a href="https://github.com/ungku02" target="_blank" class="social-link">
+                            <i class="bi bi-github"></i>
+                        </a>
+
+                        <a href="https://linkedin.com/in/ungku-zainab-9652112aa" target="_blank" class="social-link">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                        <a href="mailto:ungkuzainabzainab@gmail.com" class="social-link">
+                            <i class="bi bi-envelope-fill"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+                <div class="col" data-aos="fade-left" data-aos-delay="150">
+
+                    <div class="hero-card text-center">
+
+                        <div class="profile-circle mb-4">
+                        </div>
+
+                        <h4 class="fw-bold">
+                            Full-Stack Developer
+                        </h4>
+
+                        <p class="text-secondary">
+                            Laravel • Vue.js • REST API • ERP
+                        </p>
+
+                        <div class="row g-3">
+
+                            <div class="col-6">
+                                <div class="stat-box">
+                                    <h3 class="fw-bold text-maroon mb-0">2+</h3>
+                                    <small>Years Experience</small>
+                                </div>
+                            </div>
+
+                            <div class="col-6">
+                                <div class="stat-box">
+                                    <h3 class="fw-bold text-maroon mb-0">8+</h3>
+                                    <small>Systems Built</small>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="stat-box">
+                                    <h3 class="fw-bold text-maroon mb-0">Laravel</h3>
+                                    <small>Main Tech Stack</small>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section-padding section-alt" id="about">
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <!-- Left -->
+                <div class="col-lg-5" data-aos="fade-right">
+
+                    <span class="eyebrow mb-3">
+                        <i class="bi bi-person-badge"></i>
+                        About Me
+                    </span>
+
+                    <h2 class="section-title">
+                        Building business systems with practical solutions.
+                    </h2>
+
+                    <p class="section-subtitle mb-4">
+                        Software Engineer focused on Laravel development,
+                        API integration, ERP systems, SaaS platforms,
+                        and scalable business workflows.
+                    </p>
+
+                    <!-- Highlights -->
+                    <div class="about-highlights">
+
+                        <div class="highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>LHDN e-Invoicing Integration</span>
+                        </div>
+
+                        <div class="highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>ERP & SaaS System Development</span>
+                        </div>
+
+                        <div class="highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>REST API & Workflow Systems</span>
+                        </div>
+
+                        <div class="highlight-item">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <span>Technical Documentation (SRS / SDD)</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Right -->
+                <div class="col-lg-7" data-aos="fade-left">
+
+                    <div class="premium-card about-card">
+
+                        <div class="row g-4">
+
+                            <div class="col-md-6">
+                                <div class="mini-card">
+                                    <div class="mini-icon">
+                                        <i class="bi bi-server"></i>
+                                    </div>
+
+                                    <h5>Backend Development</h5>
+
+                                    <p>
+                                        Experienced in Laravel development,
+                                        system enhancement, and maintaining
+                                        production-ready applications.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mini-card">
+                                    <div class="mini-icon">
+                                        <i class="bi bi-diagram-3"></i>
+                                    </div>
+
+                                    <h5>System Integration</h5>
+
+                                    <p>
+                                        Worked on API integrations including
+                                        LHDN e-Invoice implementation for ERP
+                                        and healthcare systems.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mini-card">
+                                    <div class="mini-icon">
+                                        <i class="bi bi-ticket-detailed"></i>
+                                    </div>
+
+                                    <h5>Workflow Systems</h5>
+
+                                    <p>
+                                        Developed structured ticketing workflows
+                                        with category, department, and group-based routing.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mini-card">
+                                    <div class="mini-icon">
+                                        <i class="bi bi-file-earmark-text"></i>
+                                    </div>
+
+                                    <h5>Documentation</h5>
+
+                                    <p>
+                                        Prepared SRS, SDD, and technical documentation
+                                        for academic and software projects.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Skills -->
+    <section class="section-padding" id="skills">
+
+        <div class="container">
+
+            <!-- Heading -->
+            <div class="text-center mb-5" data-aos="fade-up">
+
+                <span class="eyebrow mb-3">
+                    <i class="bi bi-stars"></i>
+                    Technical Skills
+                </span>
+
+                <h2 class="section-title">
+                    Technologies & Tools
+                </h2>
+
+                <p class="section-subtitle mx-auto">
+                    A practical stack focused on building scalable systems,
+                    APIs, ERP platforms, SaaS applications, and business workflows.
+                </p>
+
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="row g-4">
+
+                <!-- Frontend -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+
+                    <div class="skill-card h-100">
+
+                        <div class="skill-icon">
+                            <i class="bi bi-window"></i>
+                        </div>
+
+                        <h5>Frontend</h5>
+
+                        <div class="skill-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Vue.js</span>
+                            <span>React.js</span>
+                            <span>Bootstrap</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Backend -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+
+                    <div class="skill-card h-100">
+
+                        <div class="skill-icon">
+                            <i class="bi bi-server"></i>
+                        </div>
+
+                        <h5>Backend</h5>
+
+                        <div class="skill-tags">
+                            <span>PHP</span>
+                            <span>Laravel</span>
+                            <span>REST API</span>
+                            <span>JWT Auth</span>
+                            <span>Java</span>
+                            <span>Java EE</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Database -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="skill-card h-100">
+
+                        <div class="skill-icon">
+                            <i class="bi bi-database"></i>
+                        </div>
+
+                        <h5>Database</h5>
+
+                        <div class="skill-tags">
+                            <span>MySQL</span>
+                            <span>PostgreSQL</span>
+                            <span>Oracle SQL</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Tools -->
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+
+                    <div class="skill-card h-100">
+
+                        <div class="skill-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+
+                        <h5>Tools & Platforms</h5>
+
+                        <div class="skill-tags">
+                            <span>Git</span>
+                            <span>OpenCart</span>
+                            <span>Figma</span>
+                            <span>Canva</span>
+                            <span>Microsoft Office</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Experience -->
+    <section class="section-padding section-alt" id="experience">
+
+        <div class="container">
+
+            <!-- Heading -->
+            <div class="text-center mb-5" data-aos="fade-up">
+
+                <span class="eyebrow mb-3">
+                    <i class="bi bi-briefcase"></i>
+                    Experience
+                </span>
+
+                <h2 class="section-title">
+                    Professional Journey
+                </h2>
+
+                <p class="section-subtitle mx-auto">
+                    Experience in ERP systems, SaaS applications,
+                    API integration, CMS development, and technical documentation.
+                </p>
+
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+
+                <!-- Searchneasy -->
+                <div class="timeline-item" data-aos="fade-up">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <div class="timeline-top">
+
+                            <div>
+                                <h4>Junior Programmer</h4>
+
+                                <p class="company-name">
+                                    Searchneasy Sdn. Bhd.
+                                    <span class="remote-badge">Remote</span>
+                                </p>
+                            </div>
+
+                            <span class="timeline-date">
+                                Apr 2025 – Present
+                            </span>
+
+                        </div>
+
+                        <ul>
+                            <li>
+                                Integrated LHDN e-Invoice API for ERP and clinic systems.
+                            </li>
+
+                            <li>
+                                Enhanced ticketing system through bug fixes and feature development.
+                            </li>
+
+                            <li>
+                                Built and customized OpenCart websites for company and clients.
+                            </li>
+
+                            <li>
+                                Supported system migration and deployment to new hosting environments.
+                            </li>
+                        </ul>
+
+                        <div class="experience-tags">
+                            <span>Laravel</span>
+                            <span>Vue.js</span>
+                            <span>MySQL</span>
+                            <span>REST API</span>
+                            <span>OpenCart</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- AMTIS -->
+                <div class="timeline-item" data-aos="fade-up">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <div class="timeline-top">
+
+                            <div>
+                                <h4>Junior Programmer Intern</h4>
+
+                                <p class="company-name">
+                                    AMTIS Solution Sdn. Bhd.
+                                </p>
+                            </div>
+
+                            <span class="timeline-date">
+                                Mar 2024 – Mar 2025
+                            </span>
+
+                        </div>
+
+                        <ul>
+                            <li>
+                                Resolved bugs and enhanced performance for E-WEN system.
+                            </li>
+
+                            <li>
+                                Developed Laravel modules and RESTful APIs.
+                            </li>
+
+                            <li>
+                                Supported migration of E-Pelaporan UMPSA from PHP to Laravel.
+                            </li>
+
+                            <li>
+                                Contributed to BRS documentation for PKNK Tourism project.
+                            </li>
+                        </ul>
+
+                        <div class="experience-tags">
+                            <span>Laravel</span>
+                            <span>Vue.js</span>
+                            <span>Vuex</span>
+                            <span>REST API</span>
+                            <span>BRS</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Freelance -->
+                <div class="timeline-item" data-aos="fade-up">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-card">
+
+                        <div class="timeline-top">
+
+                            <div>
+                                <h4>Freelance Technical Writer & Web Developer</h4>
+
+                                <p class="company-name">
+                                    Freelance
+                                </p>
+                            </div>
+
+                            <span class="timeline-date">
+                                Jul 2022 – Present
+                            </span>
+
+                        </div>
+
+                        <ul>
+                            <li>
+                                Prepared SRS, SDD, FYP reports, and technical documentation.
+                            </li>
+
+                            <li>
+                                Assisted with requirements analysis and system design.
+                            </li>
+
+                            <li>
+                                Supported minor web development tasks using PHP and JavaScript.
+                            </li>
+                        </ul>
+
+                        <div class="experience-tags">
+                            <span>SRS</span>
+                            <span>SDD</span>
+                            <span>Documentation</span>
+                            <span>PHP</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Projects -->
+    <section class="section-padding" id="projects">
+        <div class="container">
+    
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="eyebrow mb-3">
+                    <i class="bi bi-folder2-open"></i>
+                    Project Showcase
+                </span>
+    
+                <h2 class="section-title">Featured Systems</h2>
+    
+                <p class="section-subtitle mx-auto">
+                    Selected projects involving ERP systems, healthcare SaaS platforms,
+                    ticketing workflows, CMS websites, and system integrations.
+                </p>
+            </div>
+    
+    <!--Project Card-->   
+            <div class="row g-4">
+                <!--ERP-->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="project-showcase-card">
+                        <img src="./assets/img/erp-1.png" alt="EasyERP System" class="project-img">
+    
+                        <div class="project-content">
+                            <h5>EasyERP System</h5>
+                            <p>ERP system with LHDN e-Invoicing integration, bug fixes, and module enhancements.</p>
+    
+                            <div class="project-tags">
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>REST API</span>
+                            </div>
+    
+                            <button class="btn btn-maroon btn-sm mt-3" data-bs-toggle="modal"
+                                data-bs-target="#easyerpModal">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Einvoice-->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                
+                    <div class="project-showcase-card">
+                
+                        <img src="./assets/img/einvoice-2.png" alt="E-Invoice System" class="project-img">
+                
+                        <div class="project-content">
+                
+                            <h5>E-Invoice Integration System</h5>
+                
+                            <p>
+                                LHDN e-Invoice integration system for ERP platforms,
+                                ensuring invoice data synchronization and compliance validation.
+                            </p>
+                
+                            <div class="project-tags">
+                                <span>Laravel</span>
+                                <span>REST API</span>
+                                <span>LHDN</span>
+                                <span>E-Invoice</span>
+                            </div>
+                
+                            <button class="btn btn-maroon btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#einvoiceModal">
+                
+                                View Details
+                            </button>
+                
+                        </div>
+                
+                    </div>
+                
+                </div>
+
+                <!--HMS-->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                
+                    <div class="project-showcase-card">
+                
+                        <img src="./assets/img/hms-1.png" alt="HMS SaaS" class="project-img">
+                
+                        <div class="project-content">
+                
+                            <h5>HMS SaaS Platform</h5>
+                
+                            <p>
+                                Healthcare SaaS platform involving LHDN e-Invoice integration,
+                                bug fixing, and module enhancement for hospital operations.
+                            </p>
+                
+                            <div class="project-tags">
+                                <span>Laravel</span>
+                                <span>E-Invoice</span>
+                                <span>SaaS</span>
+                                <span>Healthcare</span>
+                            </div>
+                
+                            <button class="btn btn-maroon btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#hmsModal">
+                                View Details
+                            </button>
+                
+                        </div>
+                
+                    </div>
+                
+                </div>
+
+                <!--E-Ticket-->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="project-showcase-card">
+                
+                        <img src="./assets/img/pmb-1.png" alt="PMB E-Ticket System" class="project-img">
+                
+                        <div class="project-content">
+                            <h5>PMB E-Ticket System</h5>
+                
+                            <p>
+                                Support ticket system with category-based routing, group assignment,
+                                ticket creation workflow, and group management module.
+                            </p>
+                
+                            <div class="project-tags">
+                                <span>Laravel</span>
+                                <span>MySQL</span>
+                                <span>Workflow</span>
+                                <span>Support System</span>
+                            </div>
+                
+                            <button class="btn btn-maroon btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#pmbTicketModal">
+                                View Details
+                            </button>
+                        </div>
+                
+                    </div>
+                </div>
+    
+            </div>
+
+         
+            
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section-padding section-alt" id="contact">
+    
+        <div class="container">
+    
+            <div class="text-center mb-5" data-aos="fade-up">
+    
+                <span class="eyebrow mb-3">
+                    <i class="bi bi-envelope-paper"></i>
+                    Contact
+                </span>
+    
+                <h2 class="section-title">
+                    Let’s Build Something Great
+                </h2>
+    
+                <p class="section-subtitle mx-auto">
+                    Open to software engineering opportunities,
+                    freelance collaborations, and innovative projects.
+                </p>
+    
+            </div>
+    
+            <div class="row justify-content-center">
+    
+                <div class="col-lg-8" data-aos="fade-up">
+    
+                    <div class="contact-card">
+    
+                        <div class="row g-4">
+    
+                            <!-- Email -->
+                            <div class="col-md-4">
+                                <a href="mailto:ungkuzainabzainab@gmail.com" class="contact-box">
+    
+                                    <div class="contact-icon">
+                                        <i class="bi bi-envelope-fill"></i>
+                                    </div>
+    
+                                    <h5>Email</h5>
+    
+                                    <p>
+                                        ungkuzainabzainab@gmail.com
+                                    </p>
+    
+                                </a>
+                            </div>
+    
+                            <!-- LinkedIn -->
+                            <div class="col-md-4">
+                                <a href="https://linkedin.com/in/ungku-zainab-9652112aa" target="_blank" class="contact-box">
+    
+                                    <div class="contact-icon">
+                                        <i class="bi bi-linkedin"></i>
+                                    </div>
+    
+                                    <h5>LinkedIn</h5>
+    
+                                    <p>
+                                        Connect Professionally
+                                    </p>
+    
+                                </a>
+                            </div>
+    
+                            <!-- GitHub -->
+                            <div class="col-md-4">
+                                <a href="https://github.com/ungku02" target="_blank" class="contact-box">
+    
+                                    <div class="contact-icon">
+                                        <i class="bi bi-github"></i>
+                                    </div>
+    
+                                    <h5>GitHub</h5>
+    
+                                    <p>
+                                        View My Projects
+                                    </p>
+    
+                                </a>
+                            </div>
+    
+                        </div>
+    
+                        <!-- CTA -->
+                        <div class="contact-cta text-center">
+    
+                            <h4 class="fw-bold mb-3">
+                                Interested in working together?
+                            </h4>
+    
+                            <a href="mailto:ungkuzainabzainab@gmail.com" class="btn btn-maroon btn-lg">
+    
+                                Let’s Connect
+                                <i class="bi bi-arrow-right ms-2"></i>
+    
+                            </a>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+
+    <!--Modal EasyERP-->
+    <div class="modal fade" id="easyerpModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content custom-modal">
+    
+                <div class="modal-header border-0">
+                    <h4 class="fw-bold mb-0">EasyERP System</h4>
+    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+    
+                <div class="modal-body">
+    
+                <div class="row g-3 mb-4">
+                
+                    <div class="col-md-6">
+                        <img src="./assets/img/erp-2.png" class="img-fluid modal-project-img" alt="EasyERP Screenshot 1">
+                    </div>
+                
+                    <div class="col-md-6">
+                        <img src="./assets/img/erp-3.png" class="img-fluid modal-project-img" alt="EasyERP Screenshot 2">
+                    </div>
+                
+                </div>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Project Overview</h5>
+    
+                        <p>
+                            EasyERP is an enterprise resource planning system used to manage
+                            business operations, inventory movement, stock handling, purchasing,
+                            and invoicing workflows.
+                        </p>
+                    </div>
+    
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">My Contributions</h5>
+    
+                        <ul>
+                            <li>
+                                Developed modules for <strong>Receive Purchase</strong>,
+                                including batch handling for stock-in and stock-out processes.
+                            </li>
+    
+                            <li>
+                                Implemented inventory-related functions involving
+                                <strong>rack-based stock movement</strong> and stock tracking.
+                            </li>
+    
+                            <li>
+                                Developed <strong>Packing Slip</strong> module to support
+                                operational and warehouse workflow.
+                            </li>
+    
+                            <li>
+                                Fixed system bugs and ensured functions and variables matched
+                                the existing legacy ERP behavior.
+                            </li>
+    
+                            <li>
+                                Performed system testing and supported
+                                <strong>LHDN e-Invoice integration</strong>.
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Key Features</h5>
+    
+                        <div class="project-feature-grid">
+                            <div class="feature-item">
+                                <i class="bi bi-box-seam"></i>
+                                <span>Receive Purchase</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-arrow-left-right"></i>
+                                <span>Stock Movement</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-layers"></i>
+                                <span>Batch Stock Handling</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-receipt"></i>
+                                <span>Packing Slip</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-bug"></i>
+                                <span>Bug Fixing</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-file-earmark-check"></i>
+                                <span>LHDN e-Invoice Support</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <h5 class="fw-bold mb-3">Tech Stack</h5>
+    
+                        <div class="project-tags">
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>ERP System</span>
+                            <span>Inventory Module</span>
+                            <span>LHDN e-Invoice</span>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- E-Invoice Modal -->
+    <div class="modal fade" id="einvoiceModal" tabindex="-1">
+    
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+    
+            <div class="modal-content custom-modal">
+    
+                <div class="modal-header border-0">
+    
+                    <h4 class="fw-bold mb-0">
+                        E-Invoice Integration System
+                    </h4>
+    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+    
+                </div>
+    
+                <div class="modal-body">
+    
+                    <!-- Screenshots -->
+                    <div class="row g-3 mb-4">
+    
+                        <div class="col-md-6">
+                            <img src="./assets/img/einvoice-2.png" class="img-fluid modal-project-img"
+                                alt="E-Invoice Screenshot 1">
+                        </div>
+    
+                        <div class="col-md-6">
+                            <img src="./assets/img/einvoice-3.png" class="img-fluid modal-project-img"
+                                alt="E-Invoice Screenshot 2">
+                        </div>
+    
+                    </div>
+    
+                    <!-- Overview -->
+                    <div class="mb-4">
+    
+                        <h5 class="fw-bold mb-3">
+                            Project Overview
+                        </h5>
+    
+                        <p>
+                            An e-Invoice integration system developed to support
+                            ERP invoice submission to the LHDN platform using
+                            official LHDN APIs and compliance requirements.
+                        </p>
+    
+                    </div>
+    
+                    <!-- Contributions -->
+                    <div class="mb-4">
+    
+                        <h5 class="fw-bold mb-3">
+                            My Contributions
+                        </h5>
+    
+                        <ul>
+    
+                            <li>
+                                Integrated ERP invoice workflow with
+                                <strong>LHDN e-Invoice API</strong>.
+                            </li>
+    
+                            <li>
+                                Ensured invoice variables and field names matched
+                                LHDN API specifications and validation requirements.
+                            </li>
+    
+                            <li>
+                                Performed data synchronization and payload validation
+                                before invoice submission.
+                            </li>
+    
+                            <li>
+                                Assisted in testing invoice submission flow and
+                                troubleshooting API response issues.
+                            </li>
+    
+                            <li>
+                                Supported compliance-related enhancements
+                                for production usage.
+                            </li>
+    
+                        </ul>
+    
+                    </div>
+    
+                    <!-- Key Features -->
+                    <div class="mb-4">
+    
+                        <h5 class="fw-bold mb-3">
+                            Key Features
+                        </h5>
+    
+                        <div class="project-feature-grid">
+    
+                            <div class="feature-item">
+                                <i class="bi bi-file-earmark-check"></i>
+                                <span>LHDN API Integration</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-arrow-repeat"></i>
+                                <span>Invoice Synchronization</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-shield-check"></i>
+                                <span>Validation Checking</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-database-check"></i>
+                                <span>Payload Mapping</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-bug"></i>
+                                <span>API Troubleshooting</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-cloud-upload"></i>
+                                <span>Invoice Submission</span>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- Tech -->
+                    <div>
+    
+                        <h5 class="fw-bold mb-3">
+                            Tech Stack
+                        </h5>
+    
+                        <div class="project-tags">
+    
+                            <span>Laravel</span>
+                            <span>REST API</span>
+                            <span>JSON</span>
+                            <span>LHDN API</span>
+                            <span>ERP Integration</span>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <!-- HMS SaaS Modal -->
+    <div class="modal fade" id="hmsModal" tabindex="-1">
+    
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+    
+            <div class="modal-content custom-modal">
+    
+                <div class="modal-header border-0">
+    
+                    <h4 class="fw-bold mb-0">
+                        HMS SaaS Platform
+                    </h4>
+    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+    
+                </div>
+    
+                <div class="modal-body">
+    
+                    <!-- Screenshots -->
+                    <div class="row g-3 mb-4">
+    
+                        <div class="col-md-6">
+                            <img src="./assets/img/hms-2.png" class="img-fluid modal-project-img"
+                                alt="HMS Screenshot 1">
+                        </div>
+    
+                        <div class="col-md-6">
+                            <img src="./assets/img/hms-3.png" class="img-fluid modal-project-img"
+                                alt="HMS Screenshot 2">
+                        </div>
+    
+                    </div>
+    
+                    <!-- Overview -->
+                    <div class="mb-4">
+    
+                        <h5 class="fw-bold mb-3">
+                            Project Overview
+                        </h5>
+    
+                        <p>
+                            HMS SaaS is a healthcare management system designed
+                            for clinic and hospital operations, including patient,
+                            billing, and medical workflow management.
+                        </p>
+    
+                    </div>
+    
+                    <!-- Contributions -->
+                    <div class="mb-4">
+    
+                        <h5 class="fw-bold mb-3">
+                            My Contributions
+                        </h5>
+    
+                        <ul>
+    
+                            <li>
+                                Supported implementation of
+                                <strong>LHDN e-Invoice integration</strong>
+                                for healthcare billing workflows.
+                            </li>
+    
+                            <li>
+                                Ensured system variables and invoice-related data
+                                matched LHDN API validation requirements.
+                            </li>
+    
+                            <li>
+                                Fixed production bugs and improved existing system functionality.
+                            </li>
+    
+                            <li>
+                                Developed and enhanced the
+                                <strong>Medical Certificate (MC) module</strong>.
+                            </li>
+    
+                            <li>
+                                Assisted in maintaining and customizing SaaS-based
+                                healthcare workflows for client requirements.
+                            </li>
+    
+                        </ul>
+    
+                    </div>
+    
+                    <!-- Features -->
+                    <div class="mb-4">
+    
+                        <h5 class="fw-bold mb-3">
+                            Key Features
+                        </h5>
+    
+                        <div class="project-feature-grid">
+    
+                            <div class="feature-item">
+                                <i class="bi bi-hospital"></i>
+                                <span>Healthcare SaaS</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-file-earmark-medical"></i>
+                                <span>Medical Certificate Module</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-file-earmark-check"></i>
+                                <span>LHDN e-Invoice</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-arrow-repeat"></i>
+                                <span>Invoice Synchronization</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-bug"></i>
+                                <span>Bug Fixing</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-gear"></i>
+                                <span>SaaS Customization</span>
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                    <!-- Tech -->
+                    <div>
+    
+                        <h5 class="fw-bold mb-3">
+                            Tech Stack
+                        </h5>
+    
+                        <div class="project-tags">
+    
+                            <span>Laravel</span>
+                            <span>E-Invoice</span>
+                            <span>MySQL</span>
+                            <span>REST API</span>
+                            <span>SaaS</span>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <!-- PMB E-Ticket Modal -->
+    <div class="modal fade" id="pmbTicketModal" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content custom-modal">
+    
+                <div class="modal-header border-0">
+                    <h4 class="fw-bold mb-0">PMB E-Ticket System</h4>
+    
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">
+                    </button>
+                </div>
+    
+                <div class="modal-body">
+    
+                    <!-- Screenshots -->
+                    <div class="row g-3 mb-4">
+    
+                        <div class="col-md-6">
+                            <img src="./assets/img/pmb-2.png" class="img-fluid modal-project-img"
+                                alt="PMB E-Ticket Screenshot 1">
+                        </div>
+    
+                        <div class="col-md-6">
+                            <img src="./assets/img/pmb-3.png" class="img-fluid modal-project-img"
+                                alt="PMB E-Ticket Screenshot 2">
+                        </div>
+    
+                    </div>
+    
+                    <!-- Overview -->
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Project Overview</h5>
+    
+                        <p>
+                            PMB E-Ticket System is a support ticket platform that allows
+                            customers to submit reports, feedback, and issue complaints
+                            based on problems they encounter. Each ticket is categorized
+                            and routed to the designated group responsible for handling
+                            the issue.
+                        </p>
+                    </div>
+    
+                    <!-- Contributions -->
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">My Contributions</h5>
+    
+                        <ul>
+                            <li>
+                                Developed the <strong>ticket creation workflow</strong>
+                                based on customer requirements and business process.
+                            </li>
+    
+                            <li>
+                                Implemented category-based ticket handling to ensure
+                                issues are routed to the correct designated group.
+                            </li>
+    
+                            <li>
+                                Developed the <strong>Group Management module</strong>
+                                for managing support groups and ticket ownership.
+                            </li>
+    
+                            <li>
+                                Ensured submitted tickets were assigned accurately
+                                according to category, department, and group logic.
+                            </li>
+    
+                            <li>
+                                Supported bug fixing and workflow improvements to improve
+                                ticket handling efficiency.
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <!-- Features -->
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">Key Features</h5>
+    
+                        <div class="project-feature-grid">
+    
+                            <div class="feature-item">
+                                <i class="bi bi-ticket-detailed"></i>
+                                <span>Ticket Creation</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-diagram-3"></i>
+                                <span>Category Routing</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-people"></i>
+                                <span>Group Management</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-send-check"></i>
+                                <span>Auto Group Assignment</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-chat-dots"></i>
+                                <span>Customer Feedback</span>
+                            </div>
+    
+                            <div class="feature-item">
+                                <i class="bi bi-gear"></i>
+                                <span>Workflow Customization</span>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                    <!-- Tech -->
+                    <div>
+                        <h5 class="fw-bold mb-3">Tech Stack</h5>
+    
+                        <div class="project-tags">
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>Support Ticket System</span>
+                            <span>Workflow Logic</span>
+                            <span>Group Management</span>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script>
+        // Init AOS
+        AOS.init({
+            duration: 900,
+            once: true,
+            offset: 80
+        });
+
+        // Theme Toggle
+        const themeToggle = document.getElementById("themeToggle");
+        const icon = document.getElementById("themeIcon");
+
+        // Apply saved theme on load
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+
+        if (savedTheme === "dark") {
+            icon.classList.remove("bi-moon-stars-fill");
+            icon.classList.add("bi-sun-fill");
+        }
+
+        // Toggle theme
+        themeToggle.addEventListener("click", () => {
+            let currentTheme = document.documentElement.getAttribute("data-theme");
+
+            if (currentTheme === "light") {
+                document.documentElement.setAttribute("data-theme", "dark");
+                icon.classList.remove("bi-moon-stars-fill");
+                icon.classList.add("bi-sun-fill");
+                localStorage.setItem("theme", "dark");
+            } else {
+                document.documentElement.setAttribute("data-theme", "light");
+                icon.classList.remove("bi-sun-fill");
+                icon.classList.add("bi-moon-stars-fill");
+                localStorage.setItem("theme", "light");
+            }
+        });
+    </script>
+</body>
+
+</html>
